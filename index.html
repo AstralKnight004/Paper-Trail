@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Papertrail â€” Research, distilled</title>
+  <title>Papertrail - Research, distilled</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -12,16 +12,16 @@
 <body>
   <div class="app-shell">
     <aside class="sidebar">
-      <div class="brand"><span class="brand-mark">âœ¦</span><span>papertrail</span></div>
+      <div class="brand"><span class="brand-mark">*</span><span>papertrail</span></div>
       <div class="workspace-label">WORKSPACE</div>
       <nav>
-        <button class="nav-item active" data-view="discover"><span>âŒ•</span> Discover</button>
-        <button class="nav-item" data-view="saved"><span>â™¡</span> Saved papers <em id="savedCount">0</em></button>
-        <button class="nav-item" data-view="briefs"><span>â–¤</span> Briefs</button>
+        <button class="nav-item active" data-view="discover"><span>Search</span> Discover</button>
+        <button class="nav-item" data-view="saved"><span>Saved</span> Saved papers <em id="savedCount">0</em></button>
+        <button class="nav-item" data-view="briefs"><span>Briefs</span> Briefs</button>
       </nav>
       <div class="sidebar-bottom">
-        <div class="status-card"><span class="status-dot"></span><div><strong>Live sources on</strong><small>OpenAlex Â· Crossref</small></div></div>
-        <button class="settings-button" id="settingsBtn">âš™ <span>Settings</span></button>
+        <div class="status-card"><span class="status-dot"></span><div><strong>Live sources on</strong><small>OpenAlex - Crossref</small></div></div>
+        <button class="settings-button" id="settingsBtn">Settings</button>
       </div>
     </aside>
 
@@ -34,28 +34,28 @@
       </section>
 
       <section class="search-panel">
-        <div class="search-row"><span class="search-icon">âŒ•</span><input id="topicInput" value="finite element analysis in drone design" placeholder="What are you researching?"/><button id="searchBtn" class="primary-btn">Search papers <span>â†—</span></button></div>
+        <div class="search-row"><span class="search-icon">Search</span><input id="topicInput" value="finite element analysis in drone design" placeholder="What are you researching?"/><button id="searchBtn" class="primary-btn">Search papers</button></div>
         <div class="filter-row">
           <label>Published between <select id="fromYear"></select><span>and</span><select id="toYear"></select></label>
-          <label class="count-control">Papers to find <button id="decrease">âˆ’</button><strong id="countValue">12</strong><button id="increase">+</button></label>
-          <button class="filter-btn" id="customBtn">ï¼‹ Add custom filter</button>
+          <label class="count-control">Papers to find <button id="decrease">-</button><strong id="countValue">12</strong><button id="increase">+</button></label>
+          <button class="filter-btn" id="customBtn">+ Add custom filter</button>
         </div>
         <div id="customFilters" class="custom-filters hidden"><input id="authorFilter" placeholder="Author or institution (optional)"/><input id="keywordFilter" placeholder="Must include keyword (optional)"/><select id="accessFilter"><option value="all">Any access</option><option value="open">Open access only</option></select><button id="applyCustom" class="small-btn">Apply</button></div>
       </section>
 
       <div class="content-grid">
         <section class="results-area">
-          <div class="section-heading"><div><span class="eyebrow">CURATED RESULTS</span><h2 id="resultHeading">12 papers worth your time</h2></div><div class="sort-wrap"><span>Sort by</span><select id="sortSelect"><option value="relevance">Relevance</option><option value="newest">Newest first</option><option value="citations">Citations</option></select></div></div>
-          <div id="resultMeta" class="result-meta">Ready to search Â· abstracts are summarized automatically</div>
+          <div class="section-heading"><div><span class="eyebrow">CURATED RESULTS</span><h2 id="resultHeading">12 papers worth your time</h2></div><div class="sort-wrap"><span>Sort by</span><select id="sortSelect"><option value="relevance">Relevance</option><option value="newest">Newest first</option><option value="citations">Citations</option></select><button id="exportPdf" class="export-btn">Export shown papers</button></div></div>
+          <div id="resultMeta" class="result-meta">Ready to search - abstracts are summarized automatically</div>
           <div id="results" class="paper-list"></div>
-          <div id="emptyState" class="empty-state hidden"><div class="empty-icon">âŒ</div><h3>No saved papers yet</h3><p>Save papers from Discover to build a reading list.</p></div>
+          <div id="emptyState" class="empty-state hidden"><div class="empty-icon">-</div><h3>No saved papers yet</h3><p>Save papers from Discover to build a reading list.</p></div>
         </section>
         <aside class="ai-panel">
-          <div class="ai-header"><div class="ai-spark">âœ¦</div><div><span class="eyebrow">PAPERTRAIL AI</span><h3>Your research copilot</h3></div><span class="online-pill">â— Ready</span></div>
+          <div class="ai-header"><div class="ai-spark">AI</div><div><span class="eyebrow">PAPERTRAIL AI</span><h3>Your research copilot</h3></div><span class="online-pill">Ready</span></div>
           <p class="ai-intro">Ask me to work with the papers you found. I can compare methods, surface gaps, or shape a brief.</p>
           <div class="suggestion-chips"><button data-prompt="Compare the methods used across these papers">Compare methods</button><button data-prompt="Find the most practical papers for implementation">Find practical picks</button><button data-prompt="Draft a research gap from these papers">Draft research gap</button></div>
-          <div class="ai-thread" id="aiThread"><div class="ai-message"><span class="mini-spark">âœ¦</span><p>Tell me what you want to do with this set. Iâ€™ll use the papers currently on screen.</p></div></div>
-          <div class="ai-input"><input id="aiInput" placeholder="Ask anything about these papersâ€¦"/><button id="aiSend">â†‘</button></div>
+          <div class="ai-thread" id="aiThread"><div class="ai-message"><span class="mini-spark">AI</span><p>Tell me what you want to do with this set. I will use the papers currently on screen.</p></div></div>
+          <div class="ai-input"><input id="aiInput" placeholder="Ask anything about these papers..."/><button id="aiSend">Send</button></div>
           <div class="ai-footnote">AI responses are grounded in the current paper set</div>
         </aside>
       </div>
