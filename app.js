@@ -54,3 +54,6 @@ $('profileDelete').onclick=()=>{const id=$('profileSelect').value||activeProfile
 
 // Sidebar close/open control
 $('sidebarToggle').onclick=()=>{const shell=document.querySelector('.app-shell');const collapsed=shell.classList.toggle('sidebar-collapsed');$('sidebarToggle').textContent=collapsed?'Open menu':'Close menu'};
+
+// Light/dark theme preference
+const savedTheme=localStorage.getItem('papertrail-theme')||'light';document.body.classList.toggle('dark-theme',savedTheme==='dark');$('settingsBtn').textContent=savedTheme==='dark'?'Light theme':'Dark theme';$('settingsBtn').onclick=()=>{const dark=document.body.classList.toggle('dark-theme');localStorage.setItem('papertrail-theme',dark?'dark':'light');$('settingsBtn').textContent=dark?'Light theme':'Dark theme';toast(dark?'Dark theme enabled':'Light theme enabled')};
