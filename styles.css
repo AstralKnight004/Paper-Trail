@@ -49,3 +49,6 @@ html,body{max-width:100%;overflow-x:hidden}@media(max-width:560px){.app-shell{wi
 
 /* v7.8 hide floating mascot on phone screens */
 @media(max-width:600px){.pet-companion{display:none!important}}
+
+/* v7.9 user-controlled mascot visibility */
+.pet-companion.pet-hidden{display:none!important}.pet-visibility{display:flex!important;align-items:center;gap:8px}.pet-visibility input{width:auto!important}
