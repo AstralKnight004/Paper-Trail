@@ -1,5 +1,13 @@
 # Paper-Trail Version History
 
+## v6.0 — Piku Companion Release
+- Added Piku, an animated Shih Tzu research companion that follows the pointer and responds to workspace actions
+- Added light, playful AI-style reactions and mistake roasts for empty or invalid actions
+- Added an Indian-inspired saffron, peacock, indigo, and turmeric visual language
+- Replaced the generic hero copy with “Where curiosity finds clarity”
+- Removed legacy background watermarks and decorative text artifacts
+- Preserved the developer/stable workflow and verified public deployment path
+
 ## v5.1 — Magical Repair Preview
 - Repair broken AI script and restore paper rendering
 - Remove sidebar background watermark
