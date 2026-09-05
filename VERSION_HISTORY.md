@@ -1,5 +1,11 @@
 # Paper-Trail Version History
 
+## v5.1 — Magical Repair Release
+- Repair broken AI startup and restore year selectors and paper results
+- Remove sidebar background watermark
+- Refresh magical research headline
+
+
 ## v5.0 — Magical Gryffindor Release
 - Classy Gryffindor-inspired visual theme
 - Enchanted research headline and AJAY watermarks
