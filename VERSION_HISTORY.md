@@ -1,5 +1,11 @@
 # Paper-Trail Version History
 
+## v6.1 — Paper Brief and Menu Repair
+- Improved the existing Paper Brief print layout without replacing its browser print-to-PDF flow
+- Added fixed table columns, print headers, long-text wrapping, generated date, and clickable paper links
+- Added a subtle repeated print watermark: “Made by Ajay”
+- Repaired the sidebar close/open event binding
+
 ## v6.0 — Piku Companion Release
 - Added Piku, an animated Shih Tzu research companion that follows the pointer and responds to workspace actions
 - Added light, playful AI-style reactions and mistake roasts for empty or invalid actions
