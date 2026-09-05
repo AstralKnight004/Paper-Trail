@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=7.10" />
+  <style>@media (max-width:900px){.sidebar .nav-item>span{display:none}.sidebar .nav-item{gap:8px}}</style>
 </head>
 <body>
   <div class="app-shell">
@@ -25,7 +26,7 @@
       </div>
     
     </aside>
-    <div class="pet-companion" id="petCompanion" data-layer="annotation" aria-live="polite"><div class="pet-mountain" aria-hidden="true"><span class="mountain-back"></span><span class="mountain-front"></span><span class="mountain-flag">◆</span></div><div class="pet-bubble" id="petMessage">Namaste! I am your research companion.</div><button class="pet-dog" id="petDog" type="button" aria-label="Piku, an animated Shih Tzu research companion" title="Piku, your research companion"><span class="pet-tail"></span><span class="pet-body"></span><span class="pet-ear pet-ear-left"></span><span class="pet-ear pet-ear-right"></span><span class="pet-head"><span class="pet-face-mask"></span><span class="pet-eye pet-eye-left"></span><span class="pet-eye pet-eye-right"></span><span class="pet-nose"></span><span class="pet-muzzle"></span><span class="pet-mouth"></span></span><span class="pet-paw pet-paw-left"></span><span class="pet-paw pet-paw-right"></span></button></div>
+    <div class="pet-companion" id="petCompanion" data-layer="annotation" aria-live="polite"><div class="pet-mountain" aria-hidden="true"><span class="mountain-back"></span><span class="mountain-front"></span><span class="mountain-flag">◆</span></div><div class="pet-bubble" id="petMessage">Hello! I am your virtual research companion. You can customize me in the profile menu.</div><button class="pet-dog" id="petDog" type="button" aria-label="NUNU, an animated Shih Tzu research companion" title="NUNU, your research companion"><span class="pet-tail"></span><span class="pet-body"></span><span class="pet-ear pet-ear-left"></span><span class="pet-ear pet-ear-right"></span><span class="pet-head"><span class="pet-face-mask"></span><span class="pet-eye pet-eye-left"></span><span class="pet-eye pet-eye-right"></span><span class="pet-nose"></span><span class="pet-muzzle"></span><span class="pet-mouth"></span></span><span class="pet-paw pet-paw-left"></span><span class="pet-paw pet-paw-right"></span></button></div>
 
     <main class="main-content">
       <header class="topbar"><div class="breadcrumb">Research workspace <span>/</span> <b id="viewLabel">Discover</b></div><button class="avatar" id="profileBtn" title="Open local profile">AK</button></header>
@@ -68,6 +69,7 @@
   <div id="profileModal" class="profile-modal hidden"><div class="profile-card"><span class="eyebrow">LOCAL PROFILE</span><h2 id="profileTitle">Choose your profile</h2><p>Your saved papers and preferences stay on this device and are kept separate for each profile.</p><label>Profile name<input id="profileName" placeholder="e.g. Ajay" maxlength="32" /></label><div class="profile-avatar-row"><label>Profile image<input id="profileAvatar" type="file" accept="image/png,image/jpeg,image/webp" /></label><div id="profileAvatarPreview" class="profile-avatar-preview" aria-label="Profile image preview"></div></div><label>Pet name<input id="petName" placeholder="e.g. Piku" maxlength="24" /></label><label>Pet type<select id="petType"><option value="dog">Shih Tzu dog</option><option value="cat">Cat</option><option value="koala">Koala</option><option value="seal">Seal</option><option value="lion">Lion</option><option value="tiger">Tiger</option></select></label><label class="pet-visibility"><input id="petVisibility" type="checkbox" checked> Show mascot</label><label>Password<input id="profilePassword" type="password" minlength="4" placeholder="At least 4 characters" /></label><label>Switch profile<select id="profileSelect"><option value="">Select an existing profile</option></select></label><div class="profile-actions"><button id="profileSave" class="primary-btn">Create profile</button><button id="profileDelete" class="profile-delete">Delete profile</button><button id="profileClose" class="profile-close">Close</button></div><small>Passwords protect profiles on this device only.</small></div></div>
   <div id="toast" class="toast"></div>
   <script src="app.js?v=24"></script>
+  <script>(function(){var k='papertrail-mascot-name',n=localStorage.getItem(k);if(!n||n.toLowerCase()==='piku'){localStorage.setItem(k,'NUNU');if(typeof ptSetPetName==='function')ptSetPetName('NUNU')}if(typeof render==='function')setTimeout(function(){render([])},0)})();</script>
 </body>
 </html>
 
