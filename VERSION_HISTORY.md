@@ -1,5 +1,14 @@
 # Paper-Trail Version History
 
+## v7.0 — Research Intelligence Architecture
+- Added draggable Piku annotation layer with cursor-following eyes and activity-aware reactions
+- Added query-selected OpenAlex, Crossref, Semantic Scholar, and PubMed adapters with normalization, caching, cancellation, deduplication, and transparent PaperTrail ranking
+- Added citation categories and structured citation relationships where provider data exists
+- Added Personal Research Library search, folders, likes, and Find more like this
+- Added grounded multi-paper Research Brief generation with explicit missing-data language
+- Preserved the printable Paper Brief export and local profile system
+- Documented backend-only requirements for secrets, CORE, arXiv reliability, and secure AI APIs
+
 ## v6.2 — Piku Focus and Paper Brief UX
 - Moved Piku into a separate floating annotation layer in the upper-right workspace area
 - Improved the Shih Tzu silhouette, facial fur, eye tracking, and activity-aware reactions
