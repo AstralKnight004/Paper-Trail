@@ -35,3 +35,5 @@ body:not(.dark-theme){background:#fbf7ee}.main-content{background-image:radial-g
 
 /* v7.1 Piku expressions */
 .pet-companion{transition:top .18s ease,right .18s ease,filter .18s ease}.pet-companion.pet-happy{filter:saturate(1.25) brightness(1.05)}.pet-companion.pet-tickled{animation:piku-tickle .28s ease-in-out 3}.pet-companion.pet-annoyed{filter:saturate(.75) hue-rotate(-12deg);transform:rotate(-3deg)}.pet-companion.pet-sleepy{filter:brightness(.9) saturate(.8);opacity:.9}@keyframes piku-tickle{0%,100%{transform:translateX(0) rotate(0)}25%{transform:translateX(-5px) rotate(-4deg)}75%{transform:translateX(5px) rotate(4deg)}}
+
+.pet-companion.pet-thinking{animation:piku-climb 1.15s ease-in-out infinite;filter:saturate(.85) brightness(1.08)}.pet-companion.pet-thinking .pet-dog{transform:rotate(-8deg) translateY(-4px)}@keyframes piku-climb{0%,100%{transform:translate(0,0)}35%{transform:translate(-7px,-10px)}70%{transform:translate(6px,-4px)}}
