@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=7.10" />
-  <style>@media (max-width:900px){.sidebar .nav-item>span{display:none}.sidebar .nav-item{gap:8px}}</style>
+  <style>@media (max-width:900px){.sidebar .nav-item>span{display:none}.sidebar .nav-item{gap:8px}}#petDog{transform:none!important}</style>
 </head>
 <body>
   <div class="app-shell">
@@ -69,7 +69,7 @@
   <div id="profileModal" class="profile-modal hidden"><div class="profile-card"><span class="eyebrow">LOCAL PROFILE</span><h2 id="profileTitle">Choose your profile</h2><p>Your saved papers and preferences stay on this device and are kept separate for each profile.</p><label>Profile name<input id="profileName" placeholder="e.g. Ajay" maxlength="32" /></label><div class="profile-avatar-row"><label>Profile image<input id="profileAvatar" type="file" accept="image/png,image/jpeg,image/webp" /></label><div id="profileAvatarPreview" class="profile-avatar-preview" aria-label="Profile image preview"></div></div><label>Pet name<input id="petName" placeholder="e.g. Piku" maxlength="24" /></label><label>Pet type<select id="petType"><option value="dog">Shih Tzu dog</option><option value="cat">Cat</option><option value="koala">Koala</option><option value="seal">Seal</option><option value="lion">Lion</option><option value="tiger">Tiger</option></select></label><label class="pet-visibility"><input id="petVisibility" type="checkbox" checked> Show mascot</label><label>Password<input id="profilePassword" type="password" minlength="4" placeholder="At least 4 characters" /></label><label>Switch profile<select id="profileSelect"><option value="">Select an existing profile</option></select></label><div class="profile-actions"><button id="profileSave" class="primary-btn">Create profile</button><button id="profileDelete" class="profile-delete">Delete profile</button><button id="profileClose" class="profile-close">Close</button></div><small>Passwords protect profiles on this device only.</small></div></div>
   <div id="toast" class="toast"></div>
   <script src="app.js?v=24"></script>
-  <script>(function(){var enforce=function(){localStorage.setItem('papertrail-mascot-name','NUNU');if(typeof ptSetPetName==='function')ptSetPetName('NUNU');if(typeof render==='function')render([])},tries=0;enforce();var timer=setInterval(function(){enforce();if(++tries>60)clearInterval(timer)},100)})();</script>
+  <script>(function(){var enforce=function(){localStorage.setItem('papertrail-mascot-name','NUNU');if(typeof ptSetPetName==='function')ptSetPetName('NUNU');if(typeof render==='function')render([])},tries=0;enforce();var timer=setInterval(function(){enforce();if(++tries>60)clearInterval(timer)},100);document.addEventListener('mousemove',function(e){var x=Math.max(-4,Math.min(4,(e.clientX-innerWidth*.5)/120)),y=Math.max(-3,Math.min(3,(e.clientY-innerHeight*.45)/150));document.querySelectorAll('.pet-eye:before').forEach(function(eye){eye.style.setProperty('--eye-x',x+'px');eye.style.setProperty('--eye-y',y+'px')})},{passive:true})})();</script>
 </body>
 </html>
 
