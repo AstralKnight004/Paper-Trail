@@ -7,3 +7,4 @@
 - Added selected-paper AI focus with detailed answers grounded in available metadata and abstracts.
 - Fixed dark-mode input, link, and filter contrast.
 - Promoted from developer to stable after JavaScript validation.
+- Fixed duplicate menu event handling and cache-busted the final public assets.
